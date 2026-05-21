@@ -4,7 +4,7 @@ function add (parola){
     for (i = 0; i < parola.length; i++) {
         let risposta = true;
 
-        if(parola.at(i) !== parola.at(-i)) {
+        if(parola.at(i) !== parola.at(-i - 1)) {
            return false;
         }
         
