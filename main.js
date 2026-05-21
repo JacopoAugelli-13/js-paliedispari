@@ -1,19 +1,24 @@
-const question = prompt('qual è la parola chiave?');
-let risposta = 'Palindroma';
+const parola = prompt('qual è la parola chiave?');
 
-function add (question){
-    if(question === risposta) {
+function add (parola){
+    for (i = 0; i < parola.length; i++) {
+        let risposta = true;
 
-        console.log('è la parola giusta')
-        return true;
-
-    } else {
-        return false;
-    }
+        if(parola.at(i) !== parola.at(-i)) {
+           return false;
+        }
+        
+    }    
+    
 }
 
-let Result = add(question);
-console.log(Result);
+const messaggio = add(parola)
+ ? `la parola ${parola} è palindroma`
+ : `la parola ${parola} non è palindroma`;
+
+console.log(messaggio);
+
+
 
 let max = 5;
 let min = 1;
