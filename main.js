@@ -9,7 +9,7 @@ function add (parola){
         }
         
     }    
-    
+    return true;
 }
 
 const messaggio = add(parola)
