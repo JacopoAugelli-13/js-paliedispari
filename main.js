@@ -22,18 +22,39 @@ console.log(messaggio);
 
 let max = 5;
 let min = 1;
-let pari = '2 in su';
-let dispari = '1 in su';
+let pari = 'pari';
+let dispari = 'dispari';
 
-const getRand = Math.floor(Math.random() * (max - min) + 1) + min;
+let scelta = prompt('scegli pari o dispari')
+let decisionePrimoUtente = Math.floor(Math.random() * (max - min + 1) + min);
+let decisioneSecondoUtente = Math.floor(Math.random() * (max - min + 1) + min);
 
-function Summ (max, min) {
-    if (getRand % 2 === 0) {
+console.log( `Giocatore 1 ha scelto ${decisionePrimoUtente}`)
+console.log( `Giocatore 2 ha scelto ${decisioneSecondoUtente}`)
+
+function Summ () {
+    let somma = decisionePrimoUtente + decisioneSecondoUtente;
+    console.log(`la somma è ${somma}`);
+    
+    if(somma === 0){ 
         return pari;
     } else {
         return dispari;
     }
 }
 
-let risultato = Summ()
+
+let risultato = Summ();
+
+const alert = (risultato === pari)
+ ? `la parola è Pari`
+ : `la parola è Dispari`;
+
+ if(scelta.toLowerCase() === risultato) {
+    console.log('hai vinto')
+ } else {
+    console.log('hai perso')
+ }
+
+console.log(alert)
 console.log(risultato);
