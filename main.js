@@ -1,12 +1,12 @@
 const question = prompt('qual è la parola chiave?');
-let risposta = 'Polindroma';
+let risposta = 'Palindroma';
 
 function add (question){
     if(question === risposta) {
 
         console.log('è la parola giusta')
         return true;
-        
+
     } else {
         return false;
     }
