@@ -2,7 +2,7 @@ const parola = prompt('qual è la parola chiave?');
 
 function add (parola){
     for (i = 0; i < parola.length; i++) {
-        let risposta = true;
+        
 
         if(parola.at(i) !== parola.at(-i - 1)) {
            return false;
@@ -32,11 +32,11 @@ let decisioneSecondoUtente = Math.floor(Math.random() * (max - min + 1) + min);
 console.log( `Giocatore 1 ha scelto ${decisionePrimoUtente}`)
 console.log( `Giocatore 2 ha scelto ${decisioneSecondoUtente}`)
 
-function Summ () {
+function summ () {
     let somma = decisionePrimoUtente + decisioneSecondoUtente;
     console.log(`la somma è ${somma}`);
     
-    if(somma === 0){ 
+    if(somma % 2 === 0){ 
         return pari;
     } else {
         return dispari;
@@ -44,7 +44,7 @@ function Summ () {
 }
 
 
-let risultato = Summ();
+let risultato = summ();
 
 const alert = (risultato === pari)
  ? `la parola è Pari`
